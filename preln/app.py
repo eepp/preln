@@ -65,6 +65,9 @@ def _parse_args():
               file=sys.stderr)
         sys.exit(1)
 
+    # source absolute path
+    args.src = os.path.abspath(args.src)
+
     return args
 
 
