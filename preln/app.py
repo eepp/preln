@@ -112,7 +112,7 @@ def create_prefix_path(src, output, depth, ignore_case, space_replacement):
         msg = 'Error: could not create "{}"'.format(link)
         print(msg, file=sys.stderr)
     else:
-        msg = 'Created "{}"'.format(link)
+        msg = '"{}" -> "{}"'.format(link, os.path.abspath(src))
         print(msg)
 
 
