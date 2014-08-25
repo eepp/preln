@@ -1,7 +1,7 @@
 preln
 =====
 
-**preln**, which stands for **pre**fix tree **ln**, is a command line
+**preln**, which stands for <b>pre</b>fix tree **ln**, is a command line
 utility used to create a prefix path of one or more directories and one
 symbolic link to categorize a file/directory according to its first
 character(s). It can be used in conjunction with `find` to create a
