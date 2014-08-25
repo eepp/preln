@@ -50,31 +50,31 @@ use preln with `find` like this:
 and `/tmp/links` will look like this:
 
     A/
-      _Alabama -> /some/path/Alabama
-      _Alaska -> /some/path/Alaska
-      _Arkansas -> /some/path/Arkansas
+      Alabama_ -> /some/path/Alabama
+      Alaska_ -> /some/path/Alaska
+      Arkansas_ -> /some/path/Arkansas
     D/
-      _Delaware -> /some/path/Delaware
+      Delaware_ -> /some/path/Delaware
     I/
-      _Illinois -> /some/path/Illinois
-      _Indiana -> /some/path/Indiana
+      Illinois_ -> /some/path/Illinois
+      Indiana_ -> /some/path/Indiana
     M/
-      _Maine -> /some/path/Maine
-      _Maryland -> /some/path/Maryland
-      _Missouri -> /some/path/Missouri
+      Maine_ -> /some/path/Maine
+      Maryland_ -> /some/path/Maryland
+      Missouri_ -> /some/path/Missouri
     N/
-      _Nebraska -> /some/path/Nebraska
-      _New Hampshire -> /some/path/New Hampshire
+      Nebraska_ -> /some/path/Nebraska
+      New Hampshire_ -> /some/path/New Hampshire
     O/
-      _Ohio -> /some/path/Ohio
-      _Oregon -> /some/path/Oregon
+      Ohio_ -> /some/path/Ohio
+      Oregon_ -> /some/path/Oregon
     U/
-      _Utah -> /some/path/Utah
+      Utah_ -> /some/path/Utah
     W/
-      _Wisconsin -> /some/path/Wisconsin
-      _Wyoming -> /some/path/Wyoming
+      Wisconsin_ -> /some/path/Wisconsin
+      Wyoming_ -> /some/path/Wyoming
 
-Symbolic links are always prefixed with `_` to avoid conflicts with
+Symbolic links are always suffixed with `_` to avoid conflicts with
 directories: with source files
 
     h
@@ -83,13 +83,13 @@ directories: with source files
 
 preln needs to create an output directory `h` and a symbolic link `h`,
 which is impossible. Thus, `h` will be the directory containing
-symbolic links `_hello` and `_hi`, while `h/_h` will be a symbolic link
-pointing to the original `h`:
+symbolic links, while `h/h_` being a symbolic link pointing to the
+original `h`:
 
     h/
-      _h -> /some/path/h
-      _hello -> /some/path/hello
-      _hi -> /some/path/hi
+      h_ -> /some/path/h
+      hello_ -> /some/path/hello
+      hi_ -> /some/path/hi
 
 preln supports custom depths (the default depth is 1):
 
@@ -101,12 +101,12 @@ would create:
     M/
       a/
         i/
-          _Maine -> /some/path/Maine
+          Maine_ -> /some/path/Maine
         r/
-          _Maryland -> /some/path/Maryland
+          Maryland_ -> /some/path/Maryland
       i/
         s/
-          _Missouri -> /some/path/Missouri
+          Missouri_ -> /some/path/Missouri
     ...
 
 preln is case sensitive by default: `Grand` and `giraffe` sources

@@ -86,7 +86,7 @@ def _extract_prefixes(src, depth, ignore_case, space_replacement):
 def _create_prefixes_branches(src, output, prefixes):
     file = os.path.basename(src)
     output_dir = os.path.join(output, os.path.join(*prefixes))
-    output_link = os.path.join(output_dir, '_' + file)
+    output_link = os.path.join(output_dir, file + '_')
 
     try:
         # create prefixes directories
